@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prabhat Dhar | Portfolio</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #111827;
+      padding: 15px;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #38bdf8; }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1f2933, #111827);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 44px; }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #38bdf8;
+      color: #000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 { border-bottom: 3px solid #111827; display: inline-block; margin-bottom: 30px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    ul.skills { columns: 2; }
+
+    footer {
+      background: #111827;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+    }
+
+    /* CHATBOT */
+    .chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .chatbot-header {
+      background: #111827;
+      color: #fff;
+      padding: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .chatbot-messages {
+      padding: 15px;
+      height: 250px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+    .msg.bot { color: #111827; margin-bottom: 10px; }
+    .msg.user { color: #2563eb; margin-bottom: 10px; text-align: right; }
+    .chatbot-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+    .chatbot-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+    .chatbot-input button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .chat-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #38bdf8;
+      color: #000;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 26px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 600px) {
+      ul.skills { columns: 1; }
+      nav ul { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Prabhat Dhar</h1>
+  <p>Data Analyst | Python | SQL | Power BI | ML | CI/CD</p>
+  <p>East Ham, Greater London • Eligible to work in UK</p>
+  <a class="btn" href="Prabhatcv.pdf" download>Download CV</a>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a Data Analyst with hands-on experience in SQL, Python, data visualisation, and machine learning. I enjoy automating workflows, building dashboards, and translating complex data into actionable insights. I am actively transitioning into DevOps, focusing on CI/CD automation and cloud tooling.</p>
+</section>
+
+<section id="experience">
+  <h2>Work Experience</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Everycare Ltd — Data Analyst & Care Assistant</h3>
+      <p><strong>2023 – Present</strong></p>
+      <p>Excel & Python data cleaning, Power BI dashboards, GDPR-compliant reporting.</p>
+    </div>
+    <div class="card">
+      <h3>KFC — Team Member</h3>
+      <p><strong>2021 – 2023</strong></p>
+      <p>High-pressure operations, reporting, teamwork & customer service.</p>
+    </div>
+    <div class="card">
+      <h3>Chaiiwala — Crew Member</h3>
+      <p><strong>2022</strong></p>
+      <p>POS systems, inventory handling, customer experience.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>A&E Data Analysis</h3>
+      <p>SQL, Python, Power BI, Tableau, ML forecasting</p>
+      <a href="https://github.com/Xclipxz07" target="_blank">View on GitHub</a>
+    </div>
+    <div class="card">
+      <h3>CI/CD Pipelines</h3>
+      <p>Python, SQL & Excel automated pipelines</p>
+      <a href="https://github.com/Xclipxz07" target="_blank">View on GitHub</a>
+    </div>
+    <div class="card">
+      <h3>Banking Churn Prediction</h3>
+      <p>EDA, ML models, ROC evaluation</p>
+      <a href="https://github.com/Xclipxz07" target="_blank">View on GitHub</a>
+    </div>
+    <div class="card">
+      <h3>Rainfall Prediction (Dissertation)</h3>
+      <p>PyCaret AutoML + deployed web app</p>
+      <a href="https://github.com/Xclipxz07" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul class="skills">
+    <li>Python</li><li>SQL</li><li>Power BI</li><li>ML</li><li>CI/CD</li><li>Git</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: prabhatdhar32@gmail.com</p>
+  <p>GitHub: <a href="https://github.com/Xclipxz07">github.com/Xclipxz07</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/prabhat-dhar-13723618b/">LinkedIn Profile</a></p>
+</section>
+
+
+<footer>
+  <p>© 2025 Prabhat Dhar</p>
+</footer>
+
+<!-- CHATBOT -->
+<button class="chat-toggle" onclick="toggleChat()">💬</button>
+<div class="chatbot" id="chatbot">
+  <div class="chatbot-header">Ask Me</div>
+  <div class="chatbot-messages" id="messages">
+    <div class="msg bot">Hi! Ask me about my skills, projects, or experience.</div>
+  </div>
+  <div class="chatbot-input">
+    <input id="userInput" placeholder="Type a question..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script>
+  function toggleChat() {
+    const bot = document.getElementById('chatbot');
+    bot.style.display = bot.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  function sendMessage() {
+    const input = document.getElementById('userInput');
+    const msg = input.value.toLowerCase();
+    if (!msg) return;
+
+    const messages = document.getElementById('messages');
+    messages.innerHTML += `<div class='msg user'>${input.value}</div>`;
+
+    let reply = "I can tell you about my skills, projects, or experience.";
+    if (msg.includes('skill')) reply = "I work with Python, SQL, Power BI, ML, and CI/CD.";
+    if (msg.includes('project')) reply = "I have worked on A&E analysis, CI/CD pipelines, ML forecasting, and fraud detection.";
+    if (msg.includes('experience')) reply = "I have experience as a Data Analyst at Everycare Ltd.";
+
+    messages.innerHTML += `<div class='msg bot'>${reply}</div>`;
+    messages.scrollTop = messages.scrollHeight;
+    input.value = '';
+  }
+
+  // Close chatbot when clicking outside
+  document.addEventListener('click', function(event) {
+    const bot = document.getElementById('chatbot');
+    const toggleBtn = document.querySelector('.chat-toggle');
+    
+    // Check if chatbot is open and click is outside both chatbot and toggle button
+    if (bot.style.display === 'flex' && 
+        !bot.contains(event.target) && 
+        !toggleBtn.contains(event.target)) {
+      bot.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
